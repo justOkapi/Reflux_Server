@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-from gevent import monkey
-monkey.patch_all()
 from flask_socketio import SocketIO
 from functools import cmp_to_key
 from models import *
 from math import floor
+from gevent import monkey
+monkey.patch_all()
 
 app = Flask(__name__)
 if app.config["ENV"] == "production":
